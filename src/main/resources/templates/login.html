@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+</head>
+
+<body>
+
+  <div class="ui middle center aligned grid">
+      <div th:if="${param.error}" class="ui error message">
+        <div class="header">Error</div>
+        <p>The username or password you have entered is incorrect.</p>
+      </div>
+      <div th:if="${param.logout}" class="ui message">
+        <div class="header">You have been logged out.</div>
+        <p>Please log back in to access protected content.</p>
+      </div>
+
+      <form class="ui large form" th:action="@{/login}" method="post">
+        <div class="ui segment">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="username" placeholder="Username" />
+          </div>
+        </div>
+        <div class="ui segment">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+        </div>
+        <div class="ui segment">
+          <div>
+            <button class="ui primary button" type="submit">Sign In</button>
+          </div>
+        </div>
+      </form>
+  </div>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.js"></script>
+
+</html>
