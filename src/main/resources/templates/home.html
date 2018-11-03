@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html xmlns = "http://www.w3.org/1999/xhtml" 
-   xmlns:th = "http://www.thymeleaf.org" 
-   xmlns:sec = "http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-   
-   <head>
-      <title>Home</title>
-   </head>
-   <body>
-      <h1>Welcome!</h1>
-      <p>Click <a th:href = "@{/hello}">here</a> to see a greeting.</p>
-   </body>
-   
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/home.css}" href="home.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="home-image"></div>
+    <div class="welcome">
+        <h2>Welcome</h2>
+        <br>
+        <p>This is Group 3's Home Page. This page not secured, and anyone can access this page.</p>
+        <p><a th:href="@{/hello}">Click here</a> to access the secured content.</p>
+    </div>
+  </div>
+</body>
 </html>

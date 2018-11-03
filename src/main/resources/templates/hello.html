@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html xmlns = "http://www.w3.org/1999/xhtml" xmlns:th = "http://www.thymeleaf.org" 
-   xmlns:sec = "http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-   
-   <head>
-      <title>Hello World!</title>
-   </head>
-   <body>
-      <h1 th:inline = "text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-      <form th:action = "@{/logout}" method = "post">
-         <input type = "submit" value = "Sign Out"/>
-      </form>
-   </body>
-   
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+  <title>Secured Content</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/home.css}" href="home.css">
+</head>
+
+<body>
+    <div class="container">
+      <div class="hello-content">
+          <h2 th:inline="text"> Hello [[${#httpServletRequest.remoteUser}]]!</h2>
+          <p>Welcome to the secured content. Please do not copy any of the images, copy text, or print!</p>
+          <ul>
+              <li>Visit Dogs</li>
+              <li>Visit Cats</li>
+          </ul>
+      </div>
+    </div>
+    <form th:action = "@{/logout}" method = "post">
+      <div class="logout text-center">
+          <button class="btn btn-secondary" type="submit">Log Out</button>
+      </div>
+   </form>
+</body>
 </html>
