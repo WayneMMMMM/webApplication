@@ -11,13 +11,12 @@
     <div class="container">
       <div class="hello-content">
         <h2>Dog</h2>
-        <div class="dog-image" oncontextmenu="return false;">
+        <img th:src="@{/private/dog.png}" class="dog-image" oncontextmenu="return false;"></img>
         </div>
-      </div>
-      <div class="back">
+        <div class="back">
           <a th:href="@{/hello}">Back</a>
-      </div>
-    </div>
+      	</div>
+     </div>
     <form th:action = "@{/logout}" method = "post">
       <div class="logout text-center">
           <button class="btn btn-outline-secondary" type="submit">Log Out</button>

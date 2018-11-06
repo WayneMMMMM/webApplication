@@ -19,9 +19,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
 				.antMatchers("/", "/home").permitAll()
-				.antMatchers(HttpMethod.GET, "/resources/private/images/cat.png").authenticated()
+				.antMatchers("/private/**").authenticated()
+				.requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
 				.anyRequest().authenticated()
 				.and()
 			.formLogin()

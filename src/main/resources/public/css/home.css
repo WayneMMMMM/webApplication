@@ -14,13 +14,11 @@
 }
 
 .dog-image {
-  background-image: url('../../private/images/dog.png');
   width: 350px;
   height: 360px;
 }
 
 .cat-image {
-  background-image: url('../../private/images/cat.png');
   background-size: 100% 100%;
   width: 175px;
   height: 180px;  
