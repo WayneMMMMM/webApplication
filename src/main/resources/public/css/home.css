@@ -24,10 +24,12 @@
   width: 175px;
   height: 180px;
   user-select: none;
+  pointer-events: none;
 }
 
 .description {
   margin-top: 15px;
+  pointer-events: none;
 }
 
 .back {
