@@ -16,12 +16,14 @@
 .dog-image {
   width: 350px;
   height: 360px;
+  user-select: none;
 }
 
 .cat-image {
   background-size: 100% 100%;
   width: 175px;
-  height: 180px;  
+  height: 180px;
+  user-select: none;
 }
 
 .description {
