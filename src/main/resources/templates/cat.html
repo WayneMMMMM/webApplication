@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
-  <title>Secured Content</title>
+  <title>Secured Content - Cat</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
@@ -10,12 +10,13 @@
 <body>
     <div class="container">
       <div class="hello-content">
-          <h2 th:inline="text"> Hello [[${#httpServletRequest.remoteUser}]]!</h2>
-          <p>This page is secured. Please do not copy any of the images, copy text, or print!</p>
-          <ul>
-              <li><a th:href="@{/dog}">Dog</a></li>
-              <li><a th:href="@{/cat}">Cat</a></li>
-          </ul>
+        <h2>Cat</h2>
+        <div class="cat-image"></div>
+        <p class="description">    
+        The cat is a small, typically furry, carnivorous mammal. It is often called house cat when kept as indoor pet or feral/feral domestic cat when wild. It is often valued by humans for companionship and for its ability to hunt vermin. There are more than seventy cat breeds recognized by various cat registries.</p>
+      </div>
+      <div class="back">
+          <a th:href="@{/hello}">Back</a>
       </div>
     </div>
     <form th:action = "@{/logout}" method = "post">
